@@ -1,8 +1,12 @@
 import { useState } from "react";
-import "./App.css";
+import { AppContext } from "./context/contextApi";
 
 function App() {
-	return <div className="app">App</div>;
+  return (
+    <AppContext>
+      <div className="app">App</div>
+    </AppContext>
+  );
 }
 
 export default App;

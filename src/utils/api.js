@@ -1,4 +1,4 @@
-const axios = require("axios");
+import axios from "axios";
 
 const BASE_URL = "https://youtube138.p.rapidapi.com";
 
@@ -9,7 +9,7 @@ const options = {
     gl: "US",
   },
   headers: {
-    "X-RapidAPI-Key": "4472fe5a6emsh77b265280476d04p125b60jsn7d185f2fb0f0",
+    "X-RapidAPI-Key": process.env.REACT_APP_YOUTUBE_API_KEY,
     "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
   },
 };
