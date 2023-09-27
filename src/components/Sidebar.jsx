@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-import LeftNavMenuItem from "./LeftNavMenuItem";
+import SidebarMenuItem from "./SidebarMenuItem";
 import { categories } from "../utils/constants";
 import { Context } from "../context/contextApi";
 
-const LeftNav = () => {
+const Sidebar = () => {
 	const { selectedCategory, setSelectedCategory, mobileMenu } =
 		useContext(Context);
 
@@ -34,7 +34,7 @@ const LeftNav = () => {
 				{categories.map((item) => {
 					return (
 						<React.Fragment key={item.name}>
-							<LeftNavMenuItem
+							<SidebarMenuItem
 								text={item.type === "home" ? "Home" : item.name}
 								icon={item.icon}
 								action={() => {
@@ -58,4 +58,4 @@ const LeftNav = () => {
 	);
 };
 
-export default LeftNav;
+export default Sidebar;
